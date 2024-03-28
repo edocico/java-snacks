@@ -12,6 +12,7 @@ public class Snack5 {
 
         int digitCount = 0;
         int letterCount = 0;
+        int symbolCount = 0;
 
         for (int i = 0; i < charArray.length; i++) {
 
@@ -25,10 +26,13 @@ public class Snack5 {
                digitCount++;
            } else if (checkLetter) {
                letterCount++;
+           } else if (!Character.isDigit(charArray[i]) && !Character.isLetter(charArray[i]) && !Character.isWhitespace(charArray[i])) {
+               symbolCount++;
            }
         }
 
         System.out.println("ha" + " " + digitCount + " " + "numeri");
         System.out.println("ha" + " " + letterCount + " " + "lettere");
+        System.out.println("ha" + " " + symbolCount + " " + "simboli");
     }
 }
